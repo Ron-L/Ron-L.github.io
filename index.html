@@ -6,7 +6,11 @@
    // init environment
   languagePluginLoader
     // then run Python code
-    .then(() => console.log(pyodide.runPython(`import sys; sys.version`)));
+    .then(() =>
+        console.log(pyodide.runPython(`import sys; sys.version`))
+        console.log('test of additional logging')
+        print('hello')
+    );
 </script>
 </head>
 <body>
